@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    background-color: rgb(236, 216, 225);
+    gap: 20px;
+    grid-template-areas: 
+    "cabecera cabecera"
+    "menu principal"
+    "pie pie";
+    
+}
+
+/**** HEADER****/
+
+.navbar{
+    grid-area: cabecera;
+    background-color: rgb(204, 63, 145);
+    padding: 20px;
+    text-align: center;
+}
+
+.title-ecomerce{
+    color: white;
+    font-size: 30px;
+    font-weight: 100%;
+}
+
+/**** NAV****/
+
+.asidebar{
+    grid-area: menu;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.title-catg{
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+li{
+    display: flex;
+}
+
+.type-categories{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+
+.amount{
+    color: gray;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/**** MAIN ****/
+
+.grid-products{
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+    
+    
+}
+
+.card-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    border: none;   
+    text-align: center;
+    
+
+}
+
+.card-img{
+    /*width: 100px;*/
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    
+}
+
+.card-products h3{
+    font-size: 30px;
+    margin: 10px;
+}
+
+
+.description-card{
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
+.price{
+    color: gray;
+    margin-bottom: 10px;
+    
+}
+
+.card-products button{
+    align-items: end;
+
+}
+.buy{
+    background-color: rgb(216, 105, 151);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    
+    
+}
+
+/**** FOOTER ****/
+
+.foot{
+    grid-area: pie;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.text-foot{
+    color: white;
+    font-size: 20px;
+}
+
